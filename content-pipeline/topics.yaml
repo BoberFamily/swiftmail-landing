@@ -161,8 +161,10 @@
     - hotjar form analytics
   unique_data_hint: SwiftMail's 12-signal set with frequency across 100 testers
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-05-20T08:22:30.507Z
+  published_at: 2026-05-20T08:45:24.964Z
 - slug: cart-abandonment-real-reasons
   title: "The Real Reasons Carts Get Abandoned (Hint: It's Not \\\"They Got
     Distracted\\\")"
