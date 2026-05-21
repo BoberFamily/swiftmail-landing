@@ -178,8 +178,10 @@
   unique_data_hint: SwiftMail's 7-reason taxonomy with actual frequencies (Price
     34%, Form 22%, Trust 11%, etc.)
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-05-21T08:31:47.905Z
+  published_at: 2026-05-21T08:58:33.830Z
 - slug: behavioral-vs-session-replay
   title: "Behavioral Triggers vs Session Replay: Different Tools for Different
     Problems"
