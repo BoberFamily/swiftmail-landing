@@ -193,8 +193,10 @@
     - session replay vs behavioral analytics
   unique_data_hint: SwiftMail vs Hotjar use-case overlap from beta testers
   humor_level: 0
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-05-23T07:27:33.750Z
+  published_at: 2026-05-23T07:56:10.462Z
 - slug: ai-explanation-vs-tagging
   title: Why AI Reasons Beat Manual Tagging for Conversion Triage
   category: behavioral
