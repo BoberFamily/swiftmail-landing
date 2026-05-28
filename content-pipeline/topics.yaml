@@ -223,8 +223,10 @@
     - Google Analytics session settings
   unique_data_hint: SwiftMail beta-tester journey lengths by vertical
   humor_level: 0
-  status: idea
+  status: published
   est_words: 1300
+  drafted_at: 2026-05-28T08:39:54.876Z
+  published_at: 2026-05-28T08:58:33.638Z
 - slug: trust-concern-checkout-fixes
   title: "Trust Concerns at Checkout: 5 Specific Fixes That Move Conversion"
   category: behavioral
