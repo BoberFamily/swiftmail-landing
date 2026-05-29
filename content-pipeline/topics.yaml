@@ -238,8 +238,10 @@
   unique_data_hint: 11% of SwiftMail beta abandonments tagged TRUST_CONCERN — what
     they have in common
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-05-29T08:39:11.404Z
+  published_at: 2026-05-29T09:10:11.640Z
 - slug: rage-click-as-bug-detector
   title: "Rage Clicks as Free QA: Letting Visitors Find Your Bugs"
   category: behavioral
