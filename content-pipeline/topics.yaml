@@ -282,8 +282,10 @@
     - customer.io pricing
   unique_data_hint: Migration time observed from Customer.io to SwiftMail (one tester)
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-01T10:14:23.150Z
+  published_at: 2026-06-01T10:37:07.721Z
 - slug: omnisend-vs-klaviyo-shopify
   title: Omnisend vs Klaviyo for Shopify Stores Under $1M GMV
   category: comparison
