@@ -296,8 +296,10 @@
     - omnisend vs klaviyo comparison
   unique_data_hint: SwiftMail's positioning vs both
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-02T09:03:35.499Z
+  published_at: 2026-06-02T09:24:44.925Z
 - slug: encharge-vs-customer-io-saas
   title: Encharge vs Customer.io for SaaS Onboarding Flows
   category: comparison
