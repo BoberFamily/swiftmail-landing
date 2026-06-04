@@ -310,8 +310,10 @@
     - encharge vs customer.io
   unique_data_hint: SwiftMail's onboarding flow design comparison
   humor_level: 0
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-04T08:44:44.167Z
+  published_at: 2026-06-04T09:16:56.933Z
 - slug: bloomreach-vs-mid-market
   title: Why Bloomreach Costs $50K and What You Get (vs $200/mo Alternatives)
   category: comparison
