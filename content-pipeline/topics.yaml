@@ -325,8 +325,10 @@
     - bloomreach features
   unique_data_hint: SwiftMail's behavioral-feature parity check vs Bloomreach core
   humor_level: 2
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-05T08:41:11.882Z
+  published_at: 2026-06-05T09:08:48.882Z
 - slug: mailerlite-vs-brevo-budget
   title: MailerLite vs Brevo for Senders on a $30/mo Budget
   category: comparison
