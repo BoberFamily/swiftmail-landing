@@ -339,8 +339,10 @@
     - mailerlite vs brevo
   unique_data_hint: Deliverability score comparison if available
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-08T09:21:52.042Z
+  published_at: 2026-06-08T09:51:41.031Z
 - slug: postmark-vs-sendgrid-transactional
   title: Postmark vs SendGrid for Transactional Email (Speed, Deliverability, Cost)
   category: comparison
