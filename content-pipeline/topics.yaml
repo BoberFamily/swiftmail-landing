@@ -353,8 +353,10 @@
     - postmark vs sendgrid
   unique_data_hint: Latency observation from SwiftMail testing
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-09T08:28:37.230Z
+  published_at: 2026-06-09T08:49:22.184Z
 - slug: convertkit-vs-substack-creators
   title: ConvertKit vs Substack for Creators in 2026
   category: comparison
