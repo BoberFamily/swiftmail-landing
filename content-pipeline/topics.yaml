@@ -367,8 +367,10 @@
     - convertkit substack comparison
   unique_data_hint: How creators in SwiftMail beta use SwiftMail alongside Substack
   humor_level: 2
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-10T08:45:50.033Z
+  published_at: 2026-06-10T09:13:42.591Z
 - slug: drip-vs-active-campaign-ecommerce
   title: Drip vs ActiveCampaign for E-commerce Stores at $500K-$2M GMV
   category: comparison
