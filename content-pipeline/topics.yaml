@@ -381,8 +381,10 @@
     - drip vs activecampaign
   unique_data_hint: Customer profile differences observed in SwiftMail beta
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-12T08:55:20.994Z
+  published_at: 2026-06-12T09:22:56.010Z
 - slug: post-purchase-flow-anatomy
   title: The Post-Purchase Email Flow That Actually Drives Repeat Purchase
   category: ecommerce
