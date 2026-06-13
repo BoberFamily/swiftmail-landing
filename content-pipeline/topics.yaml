@@ -396,8 +396,10 @@
   unique_data_hint: Repeat-purchase rate lift from SwiftMail beta tester
     implementing 12-step flow
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-13T08:18:13.809Z
+  published_at: 2026-06-13T08:42:32.629Z
 - slug: win-back-flow-90-180-365
   title: "Win-Back Flows: When 90/180/365 Days Are the Wrong Triggers"
   category: ecommerce
