@@ -424,8 +424,10 @@
     - browse abandonment email
   unique_data_hint: Browse-vs-cart abandonment ratio from beta testers
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-18T09:11:23.715Z
+  published_at: 2026-06-18T09:41:50.019Z
 - slug: discount-strategy-no-margin-bleed
   title: "Discount Strategy Without Bleeding Margin: 4 Trigger Patterns That Don't
     Train Discount-Hunting"
