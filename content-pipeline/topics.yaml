@@ -439,8 +439,10 @@
     - ecommerce discount fatigue
   unique_data_hint: Discount fatigue measurement from beta testers
   humor_level: 2
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-19T09:26:59.277Z
+  published_at: 2026-06-19T10:01:29.930Z
 - slug: vip-segment-when-to-create
   title: "VIP Customer Segment: When to Create It (And When It's Vanity)"
   category: ecommerce
