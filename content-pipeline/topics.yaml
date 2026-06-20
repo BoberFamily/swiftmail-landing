@@ -453,8 +453,10 @@
     - VIP customer segment criteria
   unique_data_hint: SwiftMail beta tester thresholds where VIP segments started lifting metrics
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-20T08:19:27.588Z
+  published_at: 2026-06-20T08:51:57.896Z
 - slug: shipping-shock-recovery
   title: "Shipping Shock: The 11% Cart Abandonment You Can Actually Recover"
   category: ecommerce
