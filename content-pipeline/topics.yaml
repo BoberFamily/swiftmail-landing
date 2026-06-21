@@ -467,8 +467,10 @@
     - shipping cost abandonment recovery
   unique_data_hint: SwiftMail data confirming 11% figure
   humor_level: 0
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-21T08:55:25.228Z
+  published_at: 2026-06-21T09:14:34.087Z
 - slug: review-request-timing
   title: When to Ask for a Product Review (And Why Day 7 Is Wrong)
   category: ecommerce
