@@ -481,8 +481,10 @@
     - post-purchase review request timing
   unique_data_hint: Review-rate by request-day data from SwiftMail beta testers
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-23T08:26:04.792Z
+  published_at: 2026-06-23T09:01:00.213Z
 - slug: replenishment-flow-by-category
   title: "Replenishment Flows: 5 Categories Where Auto-Reorder Triggers Belong"
   category: ecommerce
