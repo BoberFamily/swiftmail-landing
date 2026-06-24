@@ -495,8 +495,10 @@
     - replenishment email flow
   unique_data_hint: Optimal replenishment windows by category from SwiftMail data
   humor_level: 0
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-24T08:20:00.617Z
+  published_at: 2026-06-24T08:48:16.674Z
 - slug: email-marketing-no-list
   title: How to Start Email Marketing With Zero Subscribers (Realistic Path)
   category: strategy
