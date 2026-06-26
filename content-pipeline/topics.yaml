@@ -509,8 +509,10 @@
     - build email list from scratch
   unique_data_hint: Time-to-first-1000 from SwiftMail beta testers who started from zero
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-26T08:27:39.176Z
+  published_at: 2026-06-26T08:41:25.608Z
 - slug: email-frequency-by-vertical
   title: "Email Frequency by Vertical: 5 Real Cadences That Don't Annoy"
   category: strategy
