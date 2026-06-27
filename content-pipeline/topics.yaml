@@ -523,8 +523,10 @@
     - email frequency best practice 2026
   unique_data_hint: Unsubscribe rate by frequency observed in beta testers
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-27T07:44:56.103Z
+  published_at: 2026-06-27T08:09:06.439Z
 - slug: list-cleaning-when-and-how
   title: When to Clean Your Email List (And Why You'll Want to Wait)
   category: strategy
