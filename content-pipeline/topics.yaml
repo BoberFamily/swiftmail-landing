@@ -537,8 +537,10 @@
     - email list hygiene
   unique_data_hint: Cleaning cadence trade-offs from SwiftMail beta testers
   humor_level: 0
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-28T08:17:30.458Z
+  published_at: 2026-06-28T08:52:22.600Z
 - slug: double-opt-in-still-worth-it
   title: Is Double Opt-In Still Worth the 30% Conversion Drop in 2026?
   category: strategy
