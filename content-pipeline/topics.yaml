@@ -551,8 +551,10 @@
     - double opt-in pros cons
   unique_data_hint: SwiftMail beta-tester DOI vs SOI deliverability comparison
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-29T09:23:18.986Z
+  published_at: 2026-06-29T09:51:01.115Z
 - slug: gdpr-email-marketing-2026
   title: "GDPR Email Marketing in 2026: What Changed (And What Most Senders Still
     Do Wrong)"
