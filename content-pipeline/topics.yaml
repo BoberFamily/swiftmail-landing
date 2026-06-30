@@ -566,8 +566,10 @@
     - GDPR email marketing 2025 enforcement
   unique_data_hint: GDPR compliance observation across SwiftMail beta testers
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-06-30T08:26:00.031Z
+  published_at: 2026-06-30T08:56:11.483Z
 - slug: subject-line-formulas-that-work
   title: 7 Subject Line Formulas That Outperform \"Hi {first_name}\"
   category: strategy
