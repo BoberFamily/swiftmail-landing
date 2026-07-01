@@ -580,8 +580,10 @@
     - email subject line formulas 2026
   unique_data_hint: Open-rate lift by formula from SwiftMail beta testers
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-07-01T08:46:40.472Z
+  published_at: 2026-07-01T09:17:36.314Z
 - slug: ab-test-volume-required
   title: How Many Subscribers Before A/B Tests Mean Anything?
   category: strategy
