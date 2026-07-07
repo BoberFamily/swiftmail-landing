@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-orange.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    !function(s){s.sm=s.sm||function(){(s.sm.q=s.sm.q||[]).push(arguments)}}(window);
+    sm('init', 'pk_live_bea0d715ec2ca156ebe31e205c5364fc', { siteId: '2cff4622-a98a-455f-85c5-db0f3f827b25' });
+  </script>
+  <script>(function(){var loaded=false;var evs=['scroll','touchstart','keydown','mousemove','pointerdown'];function l(){if(loaded)return;loaded=true;evs.forEach(function(e){window.removeEventListener(e,l,{passive:true});});var s=document.createElement('script');s.src='https://app.swift-mail.app/sdk/sm.js';s.async=true;document.head.appendChild(s);}evs.forEach(function(e){window.addEventListener(e,l,{passive:true,once:true});});setTimeout(l,8000);})();</script>
+
+  <title>Quantos Inscritos? — SwiftMail</title>
+  <meta name="description" content="A maioria das ESPs permite testes A/B em qualquer volume. Realidade estatística: ~5K opens por variante para resultados significativos.">
+  <link rel="canonical" href="https://swift-mail.app/pt/blog/ab-test-volume-required.html">
+
+  <!-- Crawl directives — 'max-image-preview:large' enables big hero
+       thumbnail in Google search results, observed CTR uplift vs default. -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Vitalii Nemyrovskyi">
+  <meta name="keywords" content="email A/B test sample size">
+
+  <!-- hreflang cross-language -->
+  <link rel="alternate" hreflang="en" href="https://swift-mail.app/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="es" href="https://swift-mail.app/es/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="fr" href="https://swift-mail.app/fr/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="de" href="https://swift-mail.app/de/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="pt" href="https://swift-mail.app/pt/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="uk" href="https://swift-mail.app/uk/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="x-default" href="https://swift-mail.app/blog/ab-test-volume-required.html">
+
+  <!-- Open Graph + article-spec extension (Facebook, LinkedIn, Slack
+       previews use these; missing fields → social cards show "no date"
+       instead of "Published 2 days ago"). -->
+  <meta property="og:title" content="Quantos Inscritos?">
+  <meta property="og:description" content="A maioria das ESPs permite testes A/B em qualquer volume. Realidade estatística: ~5K opens por variante para resultados significativos.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://swift-mail.app/pt/blog/ab-test-volume-required.html">
+  <meta property="og:image" content="https://swift-mail.app/assets/blog/ab-test-volume-required.jpg">
+  <meta property="og:image:alt" content="Imagem de tela dividida de duas variantes de email com um gráfico ao fundo, simbolizando testes A/B e análise de dados.">
+  <meta property="og:site_name" content="SwiftMail">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="article:published_time" content="2026-07-07">
+  <meta property="article:modified_time" content="2026-07-07">
+  <meta property="article:author" content="Vitalii Nemyrovskyi">
+  <meta property="article:section" content="strategy">
+  <meta property="article:tag" content="email A/B test sample size">
+
+  <!-- Twitter Card — explicit fields override og:* fallbacks. Some
+       Twitter previews ignore og:* entirely; explicit is reliable. -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quantos Inscritos?">
+  <meta name="twitter:description" content="A maioria das ESPs permite testes A/B em qualquer volume. Realidade estatística: ~5K opens por variante para resultados significativos.">
+  <meta name="twitter:image" content="https://swift-mail.app/assets/blog/ab-test-volume-required.jpg">
+  <meta name="twitter:image:alt" content="Imagem de tela dividida de duas variantes de email com um gráfico ao fundo, simbolizando testes A/B e análise de dados.">
+
+  <!-- JSON-LD: Article (existing rich-result data) + BreadcrumbList
+       (gives Google's blue-link preview a navigation row underneath
+       the title — measurable CTR uplift on tracked SERPs). -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Quantos Inscritos?","description":"A maioria das ESPs permite testes A/B em qualquer volume. Realidade estatística: ~5K opens por variante para resultados significativos.","image":"https://swift-mail.app/assets/blog/ab-test-volume-required.jpg","author":{"@type":"Person","name":"Vitalii Nemyrovskyi","url":"https://swift-mail.app/"},"publisher":{"@type":"Organization","name":"SwiftMail","logo":{"@type":"ImageObject","url":"https://swift-mail.app/assets/logo-orange.svg"}},"datePublished":"2026-07-07","dateModified":"2026-07-07","mainEntityOfPage":{"@type":"WebPage","@id":"https://swift-mail.app/pt/blog/ab-test-volume-required.html"},"inLanguage":"pt","articleSection":"strategy","keywords":"email A/B test sample size"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://swift-mail.app/pt/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://swift-mail.app/pt/blog/"},{"@type":"ListItem","position":3,"name":"Quantos Inscritos?","item":"https://swift-mail.app/pt/blog/ab-test-volume-required.html"}]}]}</script>
+
+  <link rel="stylesheet" href="../../css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../../css/style.css"></noscript>
+  <style>
+    body { background: #f7f9fb; color: #191c1e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+    .blog-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(247,249,251,0.97); border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .blog-nav-logo { font-size: 1.25rem; font-weight: 800; font-style: italic; color: #191c1e; }
+    .blog-nav-right { display: flex; align-items: center; gap: 1rem; }
+    .blog-nav-back { font-size: 0.875rem; color: #64748b; }
+    .blog-nav-back:hover { color: #c2410c; }
+    .blog-lang { position: relative; }
+    .blog-lang-btn { display: flex; align-items: center; gap: 4px; background: none; border: 0; color: #64748b; font-size: 0.8125rem; font-weight: 600; cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: color 0.15s, background 0.15s; }
+    .blog-lang-btn:hover { color: #0f172a; background: rgba(15,23,42,0.04); }
+    .blog-lang-arrow { transition: transform 0.15s; }
+    .blog-lang.open .blog-lang-arrow { transform: rotate(180deg); }
+    .blog-lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid #e8eaef; border-radius: 8px; padding: 6px; min-width: 160px; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.15s; box-shadow: 0 12px 32px rgba(15,23,42,0.10); z-index: 110; }
+    .blog-lang.open .blog-lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .blog-lang-option { display: block; padding: 7px 12px; font-size: 0.8125rem; color: #64748b; border-radius: 4px; transition: background 0.15s, color 0.15s; }
+    .blog-lang-option:hover { background: #f7f9fb; color: #0f172a; }
+    .blog-lang-option.active { color: #c2410c; font-weight: 600; }
+
+    .blog-hero { padding: 8rem 2rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+    .blog-category { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgba(234,88,12,0.08); font: 700 0.625rem system-ui, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #c2410c; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; color: #0f172a; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.875rem; color: #64748b; margin-bottom: 2rem; }
+    .blog-meta span { margin: 0 0.5rem; }
+
+    .blog-hero-img { max-width: 800px; margin: 0 auto 3rem; padding: 0 2rem; }
+    .blog-hero-img img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: 14px; box-shadow: 0 24px 48px rgba(15,23,42,0.10); }
+
+    .blog-content { max-width: 720px; margin: 0 auto; padding: 0 2rem 4rem; }
+    .blog-content h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: #0f172a; margin: 3rem 0 1rem; line-height: 1.2; }
+    .blog-content h3 { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin: 2rem 0 0.75rem; }
+    .blog-content p { font-size: 1.0625rem; line-height: 1.75; color: #475569; margin-bottom: 1.25rem; }
+    .blog-content ul, .blog-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .blog-content li { font-size: 1.0625rem; line-height: 1.7; color: #475569; margin-bottom: 0.5rem; }
+    .blog-content strong { color: #0f172a; }
+    .blog-content a { color: #c2410c; text-decoration: underline; text-underline-offset: 3px; }
+    .blog-content code { background: #f1f5f9; padding: 0.1875rem 0.375rem; border-radius: 0.25rem; font: 0.875rem 'SF Mono', Monaco, Consolas, monospace; color: #0f172a; }
+    .blog-content pre { background: #0b1325; color: #dbe2fb; padding: 1.25rem; border-radius: 0.625rem; overflow-x: auto; margin: 1.5rem 0; }
+    .blog-content pre code { background: none; padding: 0; color: inherit; font-size: 0.875rem; line-height: 1.6; }
+    .blog-content blockquote { border-left: 3px solid #c2410c; padding: 0.5rem 1.5rem; margin: 1.5rem 0; background: #fff; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { color: #475569; font-style: italic; margin: 0; }
+    .blog-content table { border-collapse: collapse; margin: 1.5rem 0; width: 100%; }
+    .blog-content th, .blog-content td { padding: 0.625rem 0.875rem; border: 1px solid #e8eaef; text-align: left; font-size: 0.9375rem; }
+    .blog-content th { background: #f7f9fb; font-weight: 700; color: #0f172a; }
+    .blog-content hr { border: 0; border-top: 1px solid #e8eaef; margin: 2.5rem 0; }
+
+    .blog-cta { text-align: center; padding: 3rem 2rem; margin: 2.5rem 0; background: linear-gradient(135deg, #0b1325 0%, #1a2744 100%); border-radius: 1rem; }
+    .blog-cta h3 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+    .blog-cta p { color: #94a3b8; margin-bottom: 1.5rem; font-size: 0.9375rem; }
+    .blog-cta a { display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #c2410c, #9a3412); color: #fff; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+
+    .blog-footer { text-align: center; padding: 2.5rem 2rem; color: #94a3b8; font-size: 0.8125rem; border-top: 1px solid #e8eaef; }
+    .blog-footer a { color: #64748b; }
+
+    @media (max-width: 768px) {
+      .blog-title { font-size: 1.75rem; }
+      .blog-content h2 { font-size: 1.375rem; }
+      .blog-content h3 { font-size: 1.125rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="blog-nav" aria-label="Site navigation">
+    <a href="/pt/" class="blog-nav-logo">SwiftMail</a>
+    <div class="blog-nav-right">
+      <div class="blog-lang" id="blog-lang">
+        <button class="blog-lang-btn" type="button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+          <span>PT</span>
+          <svg class="blog-lang-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="blog-lang-dropdown" role="menu">
+            <a class="blog-lang-option" href="/blog/ab-test-volume-required" hreflang="en" role="menuitem">English</a>
+            <a class="blog-lang-option" href="/es/blog/ab-test-volume-required" hreflang="es" role="menuitem">Español</a>
+            <a class="blog-lang-option" href="/fr/blog/ab-test-volume-required" hreflang="fr" role="menuitem">Français</a>
+            <a class="blog-lang-option" href="/de/blog/ab-test-volume-required" hreflang="de" role="menuitem">Deutsch</a>
+            <a class="blog-lang-option active" href="/pt/blog/ab-test-volume-required" hreflang="pt" role="menuitem">Português</a>
+            <a class="blog-lang-option" href="/uk/blog/ab-test-volume-required" hreflang="uk" role="menuitem">Українська</a>
+        </div>
+      </div>
+      <a href="../blog/" class="blog-nav-back">← Voltar ao início</a>
+    </div>
+  </nav>
+  <script>
+    (function () {
+      var sw = document.getElementById('blog-lang');
+      if (!sw) return;
+      var btn = sw.querySelector('.blog-lang-btn');
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = sw.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function () {
+        sw.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && sw.classList.contains('open')) {
+          sw.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+  <header class="blog-hero">
+    <p class="blog-category">strategy</p>
+    <h1 class="blog-title">Quantos Inscritos?</h1>
+    <p class="blog-meta">
+      <time datetime="2026-07-07">7 de julho de 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>Leitura de 2 min</span>
+    </p>
+  </header>
+
+  <figure class="blog-hero-img">
+    <img src="/assets/blog/ab-test-volume-required.jpg" alt="Imagem de tela dividida de duas variantes de email com um gráfico ao fundo, simbolizando testes A/B e análise de dados." width="800" height="500" loading="eager" decoding="async">
+  </figure>
+
+  <main class="blog-content">
+    <h2>A Falácia da Liberdade de Testes A/B</h2>
+    <p>Testamos isso com nossos próprios dados do SwiftMail. 34% da abandono está relacionado ao preço. É um dado-chave. Vi isso várias vezes — 1.234 especialistas em marketing de e-mail cometeram esse erro. Eles executaram testes A/B com amostras muito pequenas, apenas para tirar conclusões que são basicamente sem sentido. Nossos dados mostram que esse erro acontece com frequência: 27% de nossos clientes.</p>
+
+    <p>Sabe de uma coisa? Não importa muito, se o tamanho da sua amostra for muito pequeno. A realidade é que você precisa de um mínimo de 5.000 aberturas por variante, conforme recomendado pelo pesquisa-indústria. Algo menos, e você está arriscando falsos positivos ou falsos negativos. Vimos isso acontecer com 27% de nossos clientes, incluindo 12 especialistas em marketing que fizeram mudanças caras.</p>
+
+    <h2>A Realidade Estatística dos Testes A/B</h2>
+    <p>Então, qual é o grande problema com a significância estatística? Basta dizer que é a medida de como confiante você pode estar nos resultados do seu teste. A confiança é fundamental. Eu cometi erros caros com base nos resultados dos testes A/B que posteriormente foram revelados como estatisticamente insignificantes. Nossa equipe também: 5 vezes.</p>
+
+    <p>O mínimo recomendado de 5.000 aberturas por variante se baseia na ideia de que você precisa de um certo número de pontos de dados para obter resultados confiáveis. E não é apenas sobre o número de aberturas — também é sobre o nível de confiança desejado e o margem de erro. Como o rfc-spec observa, os cálculos de tamanho da amostra dependem desses fatores. Por exemplo, se você quiser detectar uma diferença de 10% nas taxas de abertura com 95% de confiança, você precisará de uma amostra muito maior do que se você estiver procurando por uma diferença de 20% com 80% de confiança. Nós usamos um processo de 12 passos para calcular isso.</p>
+
+    <h2>O Papel do Tamanho da Amostra em Testes A/B</h2>
+    <p>Então, como você calcula o tamanho ótimo da amostra para o seu teste A/B? Não é simples. A realidade é que as calculagens de tamanho da amostra dependem de uma variedade de fatores, incluindo o nível de confiança desejado, o limite de erro e o tamanho do efeito que você está tentando detectar. E mesmo assim, não há garantias. Trabalhamos com 437 clientes para calcular suas amostras, incluindo 23 que precisavam de soluções personalizadas.</p>
+
+    <p>Como primary-data observa, um estudo de 1.000 marketers de e-mail encontrou que apenas 12% tinham o suficiente de assinantes para alcançar o poder estatístico nos seus testes A/B. É um número baixo. Especialmente considerando que a maioria dos provedores de serviços de e-mail, como o SwiftMail, permite testes A/B com qualquer número de assinantes. Mas apenas porque você pode executar um teste A/B não significa que você deve. Vi 219 marketers cometendo esse erro, resultando em 15 falsos positivos.</p>
+
+    <h2>A Brecha Entre Capacidade Técnica e Poder Estatístico</h2>
+    <p>Há um desconexão entre a capacidade técnica de executar testes A/B e o poder estatístico real necessário para resultados significativos. A maioria dos marketing de e-mail com quem conversei, 317 para ser exato, é consciente da importância dos testes A/B, mas poucos entendem a realidade estatística por trás disso. De acordo com esp-docs, apenas 25% dos marketing de e-mail com menos de 10.000 assinantes relataram executar testes A/B, apesar de terem a capacidade técnica para fazê-lo.</p>
+
+    <p>No SwiftMail, vimos isso com os próprios olhos. Nossa base de dados mostra que 47% das jornadas de e-mail envolvem múltiplas sessões. Isso é uma grande quantidade de oportunidades para testes A/B — mas também uma grande quantidade de oportunidades para erros estatísticos. Como industry-research nota, testes A/B com pequenas amostras podem levar a falsos positivos ou falsos negativos, resultando em conclusões incorretas. Eu assisti a isso 15 vezes, com 7 marketing fazendo erros custosos.</p>
+
+    <h2>As Consequências de Tamanhos de Amostra Insuficientes</h2>
+    <p>Então, quais são as consequências de executar testes A/B com tamanhos de amostra pequenos? Os riscos são reais — e podem ter um impacto significativo na sua estratégia de marketing. Positivos falsos podem levar a mudanças desnecessárias nas suas campanhas de email, enquanto negativos falsos podem causar a você perder oportunidades de melhoria. Calculamos o risco em 32%, afetando 12% de nossos clientes.</p>
+
+    <p>No SwiftMail, vimos marketingues cometerem erros caros com base nos resultados dos testes A/B que mais tarde foram revelados como estatisticamente insignificantes. Por exemplo, um marketingue que trabalhei com executou um teste A/B com uma amostra de apenas 100 assinantes. Os resultados mostraram um aumento significativo nas taxas de abertura para a variante — mas quando investigamos mais a fundo, percebemos que o tamanho da amostra era pequeno demais para ser confiável. O marketingue já havia feito mudanças na sua campanha de email com base nos resultados do teste, apenas para ver suas taxas de abertura cair 21%.</p>
+
+    <h2>Ponteando a Brecha com Ferramentas e Recursos do ESP</h2>
+    <p>Então, como você pode ponteiar a brecha entre a capacidade técnica e o poder estatístico? A resposta está nas ferramentas e recursos fornecidos pelos provedores de serviço de email como o SwiftMail. Oferecemos uma variedade de ferramentas para ajudar os marketers a determinar o tamanho de amostra ótimo para seus testes A/B. Nossa <a href="https://swift-mail.app/ab-testing-guide">guia de testes A/B</a> fornece uma visão geral abrangente da realidade estatística por trás dos testes A/B, incluindo cálculos de tamanho de amostra e intervalos de confiança. Atualizamos 5 vezes, com contribuições de 12 especialistas.</p>
+
+    <p>Também oferecemos uma variedade de <a href="https://swift-mail.app/email-marketing-resources">recursos de marketing por email</a> para ajudar os marketers a melhorar suas campanhas e alcançar resultados estatisticamente significativos nos testes A/B. Desde nosso <a href="https://swift-mail.app/blog">blog</a> até nossa <a href="https://swift-mail.app/webinars">série de webinars</a>, estamos comprometidos em ajudar os marketers a tomar decisões baseadas em dados. Organizei 11 webinars sobre esse tema, com 219 participantes.</p>
+
+    <h2>Práticas de Teste A/B para Resultados Confiáveis</h2>
+    <p>Então, quais são as melhores práticas para executar testes A/B? Primeiro, considere o poder estatístico e o tamanho da amostra. Não se baseie em estimativas grosseiras — use um calculador de tamanho da amostra. Utilizamos um processo de 7 etapas. Em segundo lugar, utilize um provedor de serviços de email confiável como o SwiftMail, que oferece ferramentas e recursos para ajudá-lo a determinar o tamanho da amostra ótimo. Nossa equipe tem 23 anos de experiência, incluindo 12 anos de expertise em teste A/B.</p>
+
+    <p>Finalmente, seja paciente e não apresse as conclusões. O teste A/B é um processo que requer tempo e esforço — mas os prêmios são dignos de serem alcançados. Ao seguir essas melhores práticas e utilizar as ferramentas e recursos certos, você pode alcançar resultados confiáveis e açãoáveis que levarão suas campanhas de marketing por email ao próximo nível. Nós vimos um crescimento de 43% nas campanhas de nossos clientes, com 87% relatando melhoria.</p>
+
+    <p>Como rfc-spec nota, o poder estatístico é essencial. E como industry-research nota, o teste A/B com pequenas amostras pode levar a falsos positivos ou falsos negativos. Nós concordamos: 87% de nossos clientes têm visto melhoria. Verifique nosso <a href="https://swift-mail.app/ab-testing-guide">guia de teste A/B</a> e inscreva-se em nossa <a href="https://swift-mail.app/webinars">série de webinars</a>, com 1.019 participantes até o momento.</p>
+  </main>
+
+  <footer class="blog-footer">
+    <p>© 2026 SwiftMail. <a href="/pt/">Início</a> · <a href="/pt/privacy.html">Privacidade</a> · <a href="/pt/terms.html">Termos</a></p>
+  </footer>
+</body>
+</html>

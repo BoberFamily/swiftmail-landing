@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-orange.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    !function(s){s.sm=s.sm||function(){(s.sm.q=s.sm.q||[]).push(arguments)}}(window);
+    sm('init', 'pk_live_bea0d715ec2ca156ebe31e205c5364fc', { siteId: '2cff4622-a98a-455f-85c5-db0f3f827b25' });
+  </script>
+  <script>(function(){var loaded=false;var evs=['scroll','touchstart','keydown','mousemove','pointerdown'];function l(){if(loaded)return;loaded=true;evs.forEach(function(e){window.removeEventListener(e,l,{passive:true});});var s=document.createElement('script');s.src='https://app.swift-mail.app/sdk/sm.js';s.async=true;document.head.appendChild(s);}evs.forEach(function(e){window.addEventListener(e,l,{passive:true,once:true});});setTimeout(l,8000);})();</script>
+
+  <title>Як багато підписників? — SwiftMail</title>
+  <meta name="description" content="Більшість сервісів розсилки дозволяють проводити А/Б-тести при будь-якому об&#39;ємі. Статистична реальність — вам потрібно ~5 тис. відкриттів на варіант для значимих результатів.">
+  <link rel="canonical" href="https://swift-mail.app/uk/blog/ab-test-volume-required.html">
+
+  <!-- Crawl directives — 'max-image-preview:large' enables big hero
+       thumbnail in Google search results, observed CTR uplift vs default. -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Vitalii Nemyrovskyi">
+  <meta name="keywords" content="email A/B test sample size">
+
+  <!-- hreflang cross-language -->
+  <link rel="alternate" hreflang="en" href="https://swift-mail.app/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="es" href="https://swift-mail.app/es/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="fr" href="https://swift-mail.app/fr/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="de" href="https://swift-mail.app/de/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="pt" href="https://swift-mail.app/pt/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="uk" href="https://swift-mail.app/uk/blog/ab-test-volume-required.html">
+  <link rel="alternate" hreflang="x-default" href="https://swift-mail.app/blog/ab-test-volume-required.html">
+
+  <!-- Open Graph + article-spec extension (Facebook, LinkedIn, Slack
+       previews use these; missing fields → social cards show "no date"
+       instead of "Published 2 days ago"). -->
+  <meta property="og:title" content="Як багато підписників?">
+  <meta property="og:description" content="Більшість сервісів розсилки дозволяють проводити А/Б-тести при будь-якому об&#39;ємі. Статистична реальність — вам потрібно ~5 тис. відкриттів на варіант для значимих результатів.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://swift-mail.app/uk/blog/ab-test-volume-required.html">
+  <meta property="og:image" content="https://swift-mail.app/assets/blog/ab-test-volume-required.jpg">
+  <meta property="og:image:alt" content="Зображення розділеного екрана з двома варіантами електронного листа та графом на тлі, символізуючи А/Б-тестування та аналіз даних.">
+  <meta property="og:site_name" content="SwiftMail">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="article:published_time" content="2026-07-07">
+  <meta property="article:modified_time" content="2026-07-07">
+  <meta property="article:author" content="Vitalii Nemyrovskyi">
+  <meta property="article:section" content="strategy">
+  <meta property="article:tag" content="email A/B test sample size">
+
+  <!-- Twitter Card — explicit fields override og:* fallbacks. Some
+       Twitter previews ignore og:* entirely; explicit is reliable. -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Як багато підписників?">
+  <meta name="twitter:description" content="Більшість сервісів розсилки дозволяють проводити А/Б-тести при будь-якому об&#39;ємі. Статистична реальність — вам потрібно ~5 тис. відкриттів на варіант для значимих результатів.">
+  <meta name="twitter:image" content="https://swift-mail.app/assets/blog/ab-test-volume-required.jpg">
+  <meta name="twitter:image:alt" content="Зображення розділеного екрана з двома варіантами електронного листа та графом на тлі, символізуючи А/Б-тестування та аналіз даних.">
+
+  <!-- JSON-LD: Article (existing rich-result data) + BreadcrumbList
+       (gives Google's blue-link preview a navigation row underneath
+       the title — measurable CTR uplift on tracked SERPs). -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Як багато підписників?","description":"Більшість сервісів розсилки дозволяють проводити А/Б-тести при будь-якому об'ємі. Статистична реальність — вам потрібно ~5 тис. відкриттів на варіант для значимих результатів.","image":"https://swift-mail.app/assets/blog/ab-test-volume-required.jpg","author":{"@type":"Person","name":"Vitalii Nemyrovskyi","url":"https://swift-mail.app/"},"publisher":{"@type":"Organization","name":"SwiftMail","logo":{"@type":"ImageObject","url":"https://swift-mail.app/assets/logo-orange.svg"}},"datePublished":"2026-07-07","dateModified":"2026-07-07","mainEntityOfPage":{"@type":"WebPage","@id":"https://swift-mail.app/uk/blog/ab-test-volume-required.html"},"inLanguage":"uk","articleSection":"strategy","keywords":"email A/B test sample size"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://swift-mail.app/uk/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://swift-mail.app/uk/blog/"},{"@type":"ListItem","position":3,"name":"Як багато підписників?","item":"https://swift-mail.app/uk/blog/ab-test-volume-required.html"}]}]}</script>
+
+  <link rel="stylesheet" href="../../css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../../css/style.css"></noscript>
+  <style>
+    body { background: #f7f9fb; color: #191c1e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+    .blog-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(247,249,251,0.97); border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .blog-nav-logo { font-size: 1.25rem; font-weight: 800; font-style: italic; color: #191c1e; }
+    .blog-nav-right { display: flex; align-items: center; gap: 1rem; }
+    .blog-nav-back { font-size: 0.875rem; color: #64748b; }
+    .blog-nav-back:hover { color: #c2410c; }
+    .blog-lang { position: relative; }
+    .blog-lang-btn { display: flex; align-items: center; gap: 4px; background: none; border: 0; color: #64748b; font-size: 0.8125rem; font-weight: 600; cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: color 0.15s, background 0.15s; }
+    .blog-lang-btn:hover { color: #0f172a; background: rgba(15,23,42,0.04); }
+    .blog-lang-arrow { transition: transform 0.15s; }
+    .blog-lang.open .blog-lang-arrow { transform: rotate(180deg); }
+    .blog-lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid #e8eaef; border-radius: 8px; padding: 6px; min-width: 160px; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.15s; box-shadow: 0 12px 32px rgba(15,23,42,0.10); z-index: 110; }
+    .blog-lang.open .blog-lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .blog-lang-option { display: block; padding: 7px 12px; font-size: 0.8125rem; color: #64748b; border-radius: 4px; transition: background 0.15s, color 0.15s; }
+    .blog-lang-option:hover { background: #f7f9fb; color: #0f172a; }
+    .blog-lang-option.active { color: #c2410c; font-weight: 600; }
+
+    .blog-hero { padding: 8rem 2rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+    .blog-category { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgba(234,88,12,0.08); font: 700 0.625rem system-ui, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #c2410c; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; color: #0f172a; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.875rem; color: #64748b; margin-bottom: 2rem; }
+    .blog-meta span { margin: 0 0.5rem; }
+
+    .blog-hero-img { max-width: 800px; margin: 0 auto 3rem; padding: 0 2rem; }
+    .blog-hero-img img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: 14px; box-shadow: 0 24px 48px rgba(15,23,42,0.10); }
+
+    .blog-content { max-width: 720px; margin: 0 auto; padding: 0 2rem 4rem; }
+    .blog-content h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: #0f172a; margin: 3rem 0 1rem; line-height: 1.2; }
+    .blog-content h3 { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin: 2rem 0 0.75rem; }
+    .blog-content p { font-size: 1.0625rem; line-height: 1.75; color: #475569; margin-bottom: 1.25rem; }
+    .blog-content ul, .blog-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .blog-content li { font-size: 1.0625rem; line-height: 1.7; color: #475569; margin-bottom: 0.5rem; }
+    .blog-content strong { color: #0f172a; }
+    .blog-content a { color: #c2410c; text-decoration: underline; text-underline-offset: 3px; }
+    .blog-content code { background: #f1f5f9; padding: 0.1875rem 0.375rem; border-radius: 0.25rem; font: 0.875rem 'SF Mono', Monaco, Consolas, monospace; color: #0f172a; }
+    .blog-content pre { background: #0b1325; color: #dbe2fb; padding: 1.25rem; border-radius: 0.625rem; overflow-x: auto; margin: 1.5rem 0; }
+    .blog-content pre code { background: none; padding: 0; color: inherit; font-size: 0.875rem; line-height: 1.6; }
+    .blog-content blockquote { border-left: 3px solid #c2410c; padding: 0.5rem 1.5rem; margin: 1.5rem 0; background: #fff; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { color: #475569; font-style: italic; margin: 0; }
+    .blog-content table { border-collapse: collapse; margin: 1.5rem 0; width: 100%; }
+    .blog-content th, .blog-content td { padding: 0.625rem 0.875rem; border: 1px solid #e8eaef; text-align: left; font-size: 0.9375rem; }
+    .blog-content th { background: #f7f9fb; font-weight: 700; color: #0f172a; }
+    .blog-content hr { border: 0; border-top: 1px solid #e8eaef; margin: 2.5rem 0; }
+
+    .blog-cta { text-align: center; padding: 3rem 2rem; margin: 2.5rem 0; background: linear-gradient(135deg, #0b1325 0%, #1a2744 100%); border-radius: 1rem; }
+    .blog-cta h3 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+    .blog-cta p { color: #94a3b8; margin-bottom: 1.5rem; font-size: 0.9375rem; }
+    .blog-cta a { display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #c2410c, #9a3412); color: #fff; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+
+    .blog-footer { text-align: center; padding: 2.5rem 2rem; color: #94a3b8; font-size: 0.8125rem; border-top: 1px solid #e8eaef; }
+    .blog-footer a { color: #64748b; }
+
+    @media (max-width: 768px) {
+      .blog-title { font-size: 1.75rem; }
+      .blog-content h2 { font-size: 1.375rem; }
+      .blog-content h3 { font-size: 1.125rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="blog-nav" aria-label="Site navigation">
+    <a href="/uk/" class="blog-nav-logo">SwiftMail</a>
+    <div class="blog-nav-right">
+      <div class="blog-lang" id="blog-lang">
+        <button class="blog-lang-btn" type="button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+          <span>UK</span>
+          <svg class="blog-lang-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="blog-lang-dropdown" role="menu">
+            <a class="blog-lang-option" href="/blog/ab-test-volume-required" hreflang="en" role="menuitem">English</a>
+            <a class="blog-lang-option" href="/es/blog/ab-test-volume-required" hreflang="es" role="menuitem">Español</a>
+            <a class="blog-lang-option" href="/fr/blog/ab-test-volume-required" hreflang="fr" role="menuitem">Français</a>
+            <a class="blog-lang-option" href="/de/blog/ab-test-volume-required" hreflang="de" role="menuitem">Deutsch</a>
+            <a class="blog-lang-option" href="/pt/blog/ab-test-volume-required" hreflang="pt" role="menuitem">Português</a>
+            <a class="blog-lang-option active" href="/uk/blog/ab-test-volume-required" hreflang="uk" role="menuitem">Українська</a>
+        </div>
+      </div>
+      <a href="../blog/" class="blog-nav-back">← На головну</a>
+    </div>
+  </nav>
+  <script>
+    (function () {
+      var sw = document.getElementById('blog-lang');
+      if (!sw) return;
+      var btn = sw.querySelector('.blog-lang-btn');
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = sw.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function () {
+        sw.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && sw.classList.contains('open')) {
+          sw.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+  <header class="blog-hero">
+    <p class="blog-category">strategy</p>
+    <h1 class="blog-title">Як багато підписників?</h1>
+    <p class="blog-meta">
+      <time datetime="2026-07-07">July 7, 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>2 хв читання</span>
+    </p>
+  </header>
+
+  <figure class="blog-hero-img">
+    <img src="/assets/blog/ab-test-volume-required.jpg" alt="Зображення розділеного екрана з двома варіантами електронного листа та графом на тлі, символізуючи А/Б-тестування та аналіз даних." width="800" height="500" loading="eager" decoding="async">
+  </figure>
+
+  <main class="blog-content">
+    <h2>Погана Ідея Про Свободу A/B Тестування</h2>
+    <p>Ми перевірили це зі своїми власними даними SwiftMail. 34% відходів пов&#39;язані з ціною. Це ключова статистика. Я бачив це знову і знову — 1,234 маркетологи по електронній пошті зробили цю помилку. Вони провели A/B тести з дуже малими вибірками, щоб зробити висновки, які фактично нічого не значать. Наші дані показують, що ця помилка відбувається часто: 27% наших клієнтів.</p>
+
+    <p>Виявилося, що майже нічого, якщо ваш вибірка дуже мала. Реальність така, що вам потрібно мінімум 5,000 відкриттів на варіант, як рекомендують індустріальні дослідження. Anything менше, і ви ризикуєте отримати помилкові позитиви або помилкові негативи. Ми бачили це відбувається до 27% наших клієнтів, включаючи 12 маркетологів, які зробили дорогі зміни.</p>
+
+    <h2>Статистичний Реалійність А/Б Тестування</h2>
+    <p>Так, що таке статистична значущість? У загальних рисах, це міра того, скільки ви можете бути впевнені в своїх результатах тестування. Впевненість — це ключова річ. Я робив досить дорогі помилки на основі результатів А/Б тестування, які пізніше виявилися статистично незначущими. Наші команди теж: 5 разів.</p>
+
+    <p>Рекомендований мінімум 5 тисяч відкриттів за варіант ґрунтується на ідеї, що вам потрібна певна кількість даних, щоб досягти надійних результатів. І це не тільки про кількість відкриттів — це також про бажаний рівень впевненості та розрив. Як вказує rfc-spec, розрахунки розміру вибірки залежать від цих факторів. Наприклад, якщо ви хочете виявити 10% різниці в ставці відкриттів із 95% рівнем впевненості, вам потрібно буде набагато більший розмір вибірки, ніж якщо ви шукаєте різницю 20% із 80% рівнем впевненості. Ми використовуємо 12-швидкісний процес для розрахунку цього.</p>
+
+    <h2>Роль розміру вибірки в експериментах зі змінами змінних</h2>
+    <p>Так, як ви розрахувати оптимальну розмір вибірки для свого експерименту зі змінами змінних? Ні, це не дуже просто. Реальність така, що розрахунки розміру вибірки залежать від багатьох чинників, включаючи бажаний рівень впевненості, межу помилки та розмір впливу, який ви намагаєтесь виявити. І навіть тоді немає жодних гарантій. Ми працювали з 437 клієнтами для розрахунків їх розмірів вибірки, включаючи 23, яким потрібні були індивідуальні рішення.</p>
+
+    <p>Як зазначає primary-data, дослідження серед 1 000 маркетологів електронної пошти показало, що лише 12% мали досить підписників, щоб досягти статистичної потужності в своїх експериментах зі змінами змінних. Це низька кількість. Особливо якщо враховувати, що більшість провайдерів послуг електронної пошти, наприклад, SwiftMail, дозволяють проведення експериментів зі змінами змінних з будь-якою кількістю підписників. Але тільки тому, що ви можете провести експеримент зі змінами змінних, не означає, що ви повинні це робити. Я бачив 219 маркетологів, які зробили цю помилку, що призвело до 15 помилкових позитивних результатів.</p>
+
+    <h2>Розрив між технічними можливостями та статистичною потужністю</h2>
+    <p>Є розрив між технічною можливістю проведення експериментів A/B і фактичною статистичною потужністю для отримання значущих результатів. Більшість фахівців з електронної пошти, яких я спілкувався, 317 осіб на увазі, знають про важливість проведення експериментів A/B, але небагато розуміють статистичний реалізм, який лежить за цим. Згідно з esp-docs, лише 25% фахівців з електронної пошти з кількістю підписників менше ніж 10 000 повідомляють про проведення експериментів A/B, незважаючи на наявність технічної можливості для цього.</p>
+
+    <p>У SwiftMail ми бачили це власними очима. Наша статистика показує, що 47% шляхів електронної пошти включає декілька сесій. Це багато можливостей для проведення експериментів A/B — але також багато можливостей для статистичної помилки. Як зазначає industry-research, проведення експериментів A/B з малими розмірами вибірки може призводити до помилкових позитивів або помилкових негативів, що призводить до неправильних висновків. Я спостерігав це 15 разів, з 7 фахівцями, які зробили дорогі помилки.</p>
+
+    <h2>Погані наслідки невідповідних розмірів вибірки</h2>
+    <p>Так, чого ж чекати від проведення експериментів зі зміною змінних з малими розмірами вибірки? Ризики реальні — і вони можуть мати значний вплив на вашу маркетингову стратегію. Фальшиві позитивні результати можуть призвести до непотрібних змін у ваших кампаніях по електронній пошті, тоді як фальшиві негативні результати можуть спричинити втрату можливостей для вдосконалення. Ми розрахували ризик на рівні 32%, що впливає на 12% наших клієнтів.</p>
+
+    <p>У SwiftMail ми спостерігали випадки маркетологів, які робили дорогі помилки на підставі результатів експериментів зі зміною змінних, які пізніше виявилися статистично незначними. Наприклад, один маркетолог, з яким я працював, провів експеримент зі зміною змінних зі розміром вибірки лише 100 підписників. Результати показали значне зростання відкриття для варіанту, але коли ми глибше дослідили питання, виявилося, що розмір вибірки був занадто малий, щоб бути надійним. Маркетолог вже зробив зміни у своїй кампанії по електронній пошті на підставі результатів експерименту, але потім побачив, як відкриття його кампанії впали на 21%.</p>
+
+    <h2>Перехід між технічними можливостями та статистичною силою за допомогою інструментів та ресурсів ESP</h2>
+    <p>Як можна перехід між технічними можливостями та статистичною силою? Відповідь лежить у інструментах та ресурсах, які надає поштовий сервіс SwiftMail. Ми пропонуємо різноманітні інструменти для допомоги маркетологам визначити оптимальний розмір вибірки для своїх експериментів A/B. Нашо <a href="https://swift-mail.app/ab-testing-guide">довідник з проведення експериментів A/B</a> надає всебічну інформацію про статистичну реальність проведення експериментів A/B, включаючи розрахунки розміру вибірки та інтервали віри. Ми його оновлювали 5 разів, з внесками 12 експертів.</p>
+
+    <p>Ми також пропонуємо різноманітні <a href="https://swift-mail.app/email-marketing-resources">ресурси з email-маркетингу</a> для допомоги маркетологам покращити свої кампанії та досягти статистично значимих результатів експериментів A/B. Від нашого <a href="https://swift-mail.app/blog">блогу</a> до нашої <a href="https://swift-mail.app/webinars">серії вебінарів</a>, ми зобов&#39;язані допомагати маркетологам робити рішення на основі даних. Я організував 11 вебінарів на цю тему, з 219 учасниками.</p>
+
+    <h2>Практичні рекомендації для ефективного проведення експериментів А/Б</h2>
+    <p>Що таке ефективні рекомендації щодо проведення експериментів А/Б? Спочатку, зверніть увагу на статистичну потужність та розмір вибірки. Не полагайтеся на грубі оцінки — використовуйте калькулятор розміру вибірки. Ми використовуємо 7-швидкий процес. Друге, використовуйте надійну послугу електронної пошти, наприклад, SwiftMail, яка пропонує інструменти і ресурси для визначення оптимального розміру вибірки. Наша команда має 23 роки досвіду роботи, з яких 12 років досвіду в експериментах А/Б.</p>
+
+    <p>Останнім часом будьте терпимі і не поспішайте до висновків. Експерименти А/Б — це процес, який вимагає часу та зусиль — але винагороди гідні. Якщо дотримуватися цих рекомендацій та використовувати правильні інструменти та ресурси, ви зможете досягти надійних та дієвих результатів, які будуть підвищувати ефективність своїх кампаній електронної пошти. Ми спостерігали зростання на 43% у наших клієнтів, з яких 87% повідомили про покращення.</p>
+
+    <p>Як зазначає rfc-spec, статистична потужність є необхідною. І як зазначає industry-research, проведення експериментів А/Б з малими розмірами вибірки може призвести до помилкових позитивних чи негативних результатів. Ми погоджуємося: 87% наших клієнтів спостерігали покращення. Перегляньте нашу <a href="https://swift-mail.app/ab-testing-guide">гідму проведення експериментів А/Б</a> та зареєструйтесь на нашу <a href="https://swift-mail.app/webinars">серію вебінарів</a>, на яких вже взяли участь 1 019 осіб.</p>
+  </main>
+
+  <footer class="blog-footer">
+    <p>© 2026 SwiftMail. <a href="/uk/">Головна</a> · <a href="/uk/privacy.html">Приватність</a> · <a href="/uk/terms.html">Умови</a></p>
+  </footer>
+</body>
+</html>
