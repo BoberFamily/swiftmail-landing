@@ -609,8 +609,10 @@
     - email from name open rate
   unique_data_hint: Open-rate comparison from-name tests in SwiftMail beta
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-07-08T07:25:25.509Z
+  published_at: 2026-07-08T08:01:50.866Z
 - slug: email-vs-sms-when
   title: "Email vs SMS: When to Use Which (and Why the Answer Is Both)"
   category: strategy
