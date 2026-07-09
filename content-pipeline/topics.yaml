@@ -623,8 +623,10 @@
     - email vs SMS marketing
   unique_data_hint: Channel-attribution data from SwiftMail multichannel beta testers
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-07-09T08:23:14.447Z
+  published_at: 2026-07-09T08:43:19.323Z
 - slug: shopify-pixel-vs-email-platform
   title: "Shopify Web Pixel vs Email Platform Tracking: Which Fires First?"
   category: ecommerce
