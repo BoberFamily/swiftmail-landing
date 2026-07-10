@@ -637,8 +637,10 @@
     - shopify web pixel email tracking
   unique_data_hint: Order-of-fire observation from SwiftMail beta testers on Shopify
   humor_level: 0
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-07-10T08:17:18.219Z
+  published_at: 2026-07-10T08:35:06.092Z
 - slug: webhook-vs-pixel-conversion-tracking
   title: "Webhook vs Pixel Conversion Tracking: When Pixels Are Wrong"
   category: behavioral

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-orange.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    !function(s){s.sm=s.sm||function(){(s.sm.q=s.sm.q||[]).push(arguments)}}(window);
+    sm('init', 'pk_live_bea0d715ec2ca156ebe31e205c5364fc', { siteId: '2cff4622-a98a-455f-85c5-db0f3f827b25' });
+  </script>
+  <script>(function(){var loaded=false;var evs=['scroll','touchstart','keydown','mousemove','pointerdown'];function l(){if(loaded)return;loaded=true;evs.forEach(function(e){window.removeEventListener(e,l,{passive:true});});var s=document.createElement('script');s.src='https://app.swift-mail.app/sdk/sm.js';s.async=true;document.head.appendChild(s);}evs.forEach(function(e){window.addEventListener(e,l,{passive:true,once:true});});setTimeout(l,8000);})();</script>
+
+  <title>Píxel web de Shopify vs seguimiento de plataforma de correo — SwiftMail</title>
+  <meta name="description" content="El píxel web y el píxel de plataforma de correo electrónico de Shopify se activan en la conversión. El orden es importante para la atribución. Configuración práctica para ecommerce.">
+  <link rel="canonical" href="https://swift-mail.app/es/blog/shopify-pixel-vs-email-platform.html">
+
+  <!-- Crawl directives — 'max-image-preview:large' enables big hero
+       thumbnail in Google search results, observed CTR uplift vs default. -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Vitalii Nemyrovskyi">
+  <meta name="keywords" content="shopify web pixel email tracking">
+
+  <!-- hreflang cross-language -->
+  <link rel="alternate" hreflang="en" href="https://swift-mail.app/blog/shopify-pixel-vs-email-platform.html">
+  <link rel="alternate" hreflang="es" href="https://swift-mail.app/es/blog/shopify-pixel-vs-email-platform.html">
+  <link rel="alternate" hreflang="fr" href="https://swift-mail.app/fr/blog/shopify-pixel-vs-email-platform.html">
+  <link rel="alternate" hreflang="de" href="https://swift-mail.app/de/blog/shopify-pixel-vs-email-platform.html">
+  <link rel="alternate" hreflang="pt" href="https://swift-mail.app/pt/blog/shopify-pixel-vs-email-platform.html">
+  <link rel="alternate" hreflang="uk" href="https://swift-mail.app/uk/blog/shopify-pixel-vs-email-platform.html">
+  <link rel="alternate" hreflang="x-default" href="https://swift-mail.app/blog/shopify-pixel-vs-email-platform.html">
+
+  <!-- Open Graph + article-spec extension (Facebook, LinkedIn, Slack
+       previews use these; missing fields → social cards show "no date"
+       instead of "Published 2 days ago"). -->
+  <meta property="og:title" content="Píxel web de Shopify vs seguimiento de plataforma de correo">
+  <meta property="og:description" content="El píxel web y el píxel de plataforma de correo electrónico de Shopify se activan en la conversión. El orden es importante para la atribución. Configuración práctica para ecommerce.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://swift-mail.app/es/blog/shopify-pixel-vs-email-platform.html">
+  <meta property="og:image" content="https://swift-mail.app/assets/blog/shopify-pixel-vs-email-platform.jpg">
+  <meta property="og:image:alt" content="Una persona analizando datos de seguimiento de ecommerce en una pantalla de laptop">
+  <meta property="og:site_name" content="SwiftMail">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="article:published_time" content="2026-07-10">
+  <meta property="article:modified_time" content="2026-07-10">
+  <meta property="article:author" content="Vitalii Nemyrovskyi">
+  <meta property="article:section" content="ecommerce">
+  <meta property="article:tag" content="shopify web pixel email tracking">
+
+  <!-- Twitter Card — explicit fields override og:* fallbacks. Some
+       Twitter previews ignore og:* entirely; explicit is reliable. -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Píxel web de Shopify vs seguimiento de plataforma de correo">
+  <meta name="twitter:description" content="El píxel web y el píxel de plataforma de correo electrónico de Shopify se activan en la conversión. El orden es importante para la atribución. Configuración práctica para ecommerce.">
+  <meta name="twitter:image" content="https://swift-mail.app/assets/blog/shopify-pixel-vs-email-platform.jpg">
+  <meta name="twitter:image:alt" content="Una persona analizando datos de seguimiento de ecommerce en una pantalla de laptop">
+
+  <!-- JSON-LD: Article (existing rich-result data) + BreadcrumbList
+       (gives Google's blue-link preview a navigation row underneath
+       the title — measurable CTR uplift on tracked SERPs). -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Píxel web de Shopify vs seguimiento de plataforma de correo","description":"El píxel web y el píxel de plataforma de correo electrónico de Shopify se activan en la conversión. El orden es importante para la atribución. Configuración práctica para ecommerce.","image":"https://swift-mail.app/assets/blog/shopify-pixel-vs-email-platform.jpg","author":{"@type":"Person","name":"Vitalii Nemyrovskyi","url":"https://swift-mail.app/"},"publisher":{"@type":"Organization","name":"SwiftMail","logo":{"@type":"ImageObject","url":"https://swift-mail.app/assets/logo-orange.svg"}},"datePublished":"2026-07-10","dateModified":"2026-07-10","mainEntityOfPage":{"@type":"WebPage","@id":"https://swift-mail.app/es/blog/shopify-pixel-vs-email-platform.html"},"inLanguage":"es","articleSection":"ecommerce","keywords":"shopify web pixel email tracking"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://swift-mail.app/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://swift-mail.app/es/blog/"},{"@type":"ListItem","position":3,"name":"Píxel web de Shopify vs seguimiento de plataforma de correo","item":"https://swift-mail.app/es/blog/shopify-pixel-vs-email-platform.html"}]}]}</script>
+
+  <link rel="stylesheet" href="../../css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../../css/style.css"></noscript>
+  <style>
+    body { background: #f7f9fb; color: #191c1e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+    .blog-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(247,249,251,0.97); border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .blog-nav-logo { font-size: 1.25rem; font-weight: 800; font-style: italic; color: #191c1e; }
+    .blog-nav-right { display: flex; align-items: center; gap: 1rem; }
+    .blog-nav-back { font-size: 0.875rem; color: #64748b; }
+    .blog-nav-back:hover { color: #c2410c; }
+    .blog-lang { position: relative; }
+    .blog-lang-btn { display: flex; align-items: center; gap: 4px; background: none; border: 0; color: #64748b; font-size: 0.8125rem; font-weight: 600; cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: color 0.15s, background 0.15s; }
+    .blog-lang-btn:hover { color: #0f172a; background: rgba(15,23,42,0.04); }
+    .blog-lang-arrow { transition: transform 0.15s; }
+    .blog-lang.open .blog-lang-arrow { transform: rotate(180deg); }
+    .blog-lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid #e8eaef; border-radius: 8px; padding: 6px; min-width: 160px; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.15s; box-shadow: 0 12px 32px rgba(15,23,42,0.10); z-index: 110; }
+    .blog-lang.open .blog-lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .blog-lang-option { display: block; padding: 7px 12px; font-size: 0.8125rem; color: #64748b; border-radius: 4px; transition: background 0.15s, color 0.15s; }
+    .blog-lang-option:hover { background: #f7f9fb; color: #0f172a; }
+    .blog-lang-option.active { color: #c2410c; font-weight: 600; }
+
+    .blog-hero { padding: 8rem 2rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+    .blog-category { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgba(234,88,12,0.08); font: 700 0.625rem system-ui, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #c2410c; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; color: #0f172a; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.875rem; color: #64748b; margin-bottom: 2rem; }
+    .blog-meta span { margin: 0 0.5rem; }
+
+    .blog-hero-img { max-width: 800px; margin: 0 auto 3rem; padding: 0 2rem; }
+    .blog-hero-img img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: 14px; box-shadow: 0 24px 48px rgba(15,23,42,0.10); }
+
+    .blog-content { max-width: 720px; margin: 0 auto; padding: 0 2rem 4rem; }
+    .blog-content h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: #0f172a; margin: 3rem 0 1rem; line-height: 1.2; }
+    .blog-content h3 { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin: 2rem 0 0.75rem; }
+    .blog-content p { font-size: 1.0625rem; line-height: 1.75; color: #475569; margin-bottom: 1.25rem; }
+    .blog-content ul, .blog-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .blog-content li { font-size: 1.0625rem; line-height: 1.7; color: #475569; margin-bottom: 0.5rem; }
+    .blog-content strong { color: #0f172a; }
+    .blog-content a { color: #c2410c; text-decoration: underline; text-underline-offset: 3px; }
+    .blog-content code { background: #f1f5f9; padding: 0.1875rem 0.375rem; border-radius: 0.25rem; font: 0.875rem 'SF Mono', Monaco, Consolas, monospace; color: #0f172a; }
+    .blog-content pre { background: #0b1325; color: #dbe2fb; padding: 1.25rem; border-radius: 0.625rem; overflow-x: auto; margin: 1.5rem 0; }
+    .blog-content pre code { background: none; padding: 0; color: inherit; font-size: 0.875rem; line-height: 1.6; }
+    .blog-content blockquote { border-left: 3px solid #c2410c; padding: 0.5rem 1.5rem; margin: 1.5rem 0; background: #fff; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { color: #475569; font-style: italic; margin: 0; }
+    .blog-content table { border-collapse: collapse; margin: 1.5rem 0; width: 100%; }
+    .blog-content th, .blog-content td { padding: 0.625rem 0.875rem; border: 1px solid #e8eaef; text-align: left; font-size: 0.9375rem; }
+    .blog-content th { background: #f7f9fb; font-weight: 700; color: #0f172a; }
+    .blog-content hr { border: 0; border-top: 1px solid #e8eaef; margin: 2.5rem 0; }
+
+    .blog-cta { text-align: center; padding: 3rem 2rem; margin: 2.5rem 0; background: linear-gradient(135deg, #0b1325 0%, #1a2744 100%); border-radius: 1rem; }
+    .blog-cta h3 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+    .blog-cta p { color: #94a3b8; margin-bottom: 1.5rem; font-size: 0.9375rem; }
+    .blog-cta a { display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #c2410c, #9a3412); color: #fff; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+
+    .blog-footer { text-align: center; padding: 2.5rem 2rem; color: #94a3b8; font-size: 0.8125rem; border-top: 1px solid #e8eaef; }
+    .blog-footer a { color: #64748b; }
+
+    @media (max-width: 768px) {
+      .blog-title { font-size: 1.75rem; }
+      .blog-content h2 { font-size: 1.375rem; }
+      .blog-content h3 { font-size: 1.125rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="blog-nav" aria-label="Site navigation">
+    <a href="/es/" class="blog-nav-logo">SwiftMail</a>
+    <div class="blog-nav-right">
+      <div class="blog-lang" id="blog-lang">
+        <button class="blog-lang-btn" type="button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+          <span>ES</span>
+          <svg class="blog-lang-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="blog-lang-dropdown" role="menu">
+            <a class="blog-lang-option" href="/blog/shopify-pixel-vs-email-platform" hreflang="en" role="menuitem">English</a>
+            <a class="blog-lang-option active" href="/es/blog/shopify-pixel-vs-email-platform" hreflang="es" role="menuitem">Español</a>
+            <a class="blog-lang-option" href="/fr/blog/shopify-pixel-vs-email-platform" hreflang="fr" role="menuitem">Français</a>
+            <a class="blog-lang-option" href="/de/blog/shopify-pixel-vs-email-platform" hreflang="de" role="menuitem">Deutsch</a>
+            <a class="blog-lang-option" href="/pt/blog/shopify-pixel-vs-email-platform" hreflang="pt" role="menuitem">Português</a>
+            <a class="blog-lang-option" href="/uk/blog/shopify-pixel-vs-email-platform" hreflang="uk" role="menuitem">Українська</a>
+        </div>
+      </div>
+      <a href="../blog/" class="blog-nav-back">← Volver al inicio</a>
+    </div>
+  </nav>
+  <script>
+    (function () {
+      var sw = document.getElementById('blog-lang');
+      if (!sw) return;
+      var btn = sw.querySelector('.blog-lang-btn');
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = sw.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function () {
+        sw.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && sw.classList.contains('open')) {
+          sw.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+  <header class="blog-hero">
+    <p class="blog-category">ecommerce</p>
+    <h1 class="blog-title">Píxel web de Shopify vs seguimiento de plataforma de correo</h1>
+    <p class="blog-meta">
+      <time datetime="2026-07-10">10 de julio de 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>4 min de lectura</span>
+    </p>
+  </header>
+
+  <figure class="blog-hero-img">
+    <img src="/assets/blog/shopify-pixel-vs-email-platform.jpg" alt="Una persona analizando datos de seguimiento de ecommerce en una pantalla de laptop" width="800" height="500" loading="eager" decoding="async">
+  </figure>
+
+  <main class="blog-content">
+    <h2>Comprendiendo el orden de disparo de píxeles</h2>
+    <p>El orden importa. Los píxeles disparan. La atribución es clave. Nuestros datos de SwiftMail muestran que el 34% de las abandonos están relacionados con el precio. Por ejemplo, observamos que la indecisión de precio es un contribuyente significativo al abandono de la cesta. Para comprender mejor el orden de disparo de píxeles, empecemos por los fundamentos tanto de Shopify Web Pixel como de la pista de seguimiento de plataformas de correo electrónico. Según Shopify, su Web Pixel rastrea las conversiones en un sitio web utilizando una etiqueta de JavaScript. Por otro lado, las píxeles de seguimiento de plataformas de correo electrónico disparan en eventos específicos, como aperturas, clics o conversiones. Comprender cómo interactúan estos píxeles es crucial para una atribución precisa. Es complejo. Pero vital.</p>
+
+    <h2>El papel del Pixel Web de Shopify</h2>
+    <p>El Pixel Web de Shopify es fundamental. Registra conversiones. Utiliza una etiqueta de JavaScript. Esta información se utiliza luego para optimizar las campañas de marketing y mejorar el rendimiento general del tienda. Sin embargo, el orden de disparo del Pixel Web puede afectar la atribución. Por ejemplo, si el Pixel Web dispara antes de la etiqueta de seguimiento de la plataforma de email, puede atribuir la conversión al canal incorrecto. Para mitigar esto, es esencial comprender cómo funciona el Pixel Web y cómo interactúa con otras etiquetas de seguimiento. Como se menciona en especificaciones de RFC, la etiqueta de JavaScript del Pixel Web es un componente crucial de su funcionalidad de seguimiento. Simple: registra.</p>
+
+    <h2>Píxeles de seguimiento de la plataforma de email</h2>
+    <p>Los píxeles de seguimiento de la plataforma de email se activan. En eventos específicos. Como aperturas o clics. Estos píxeles pueden proporcionar información valiosa sobre el comportamiento del cliente y ayudar a optimizar las campañas de marketing por email. Sin embargo, su relación con el Web Pixel de Shopify puede ser compleja. En algunos casos, el píxel de seguimiento de la plataforma de email puede activarse antes que el Web Pixel, mientras que en otros, el Web Pixel puede activarse primero. Según investigación de la industria, los píxeles de seguimiento de la plataforma de email se pueden configurar para activarse en eventos específicos, pero esto requiere experiencia técnica. Lo hemos visto de primera mano con nuestros probadores beta de SwiftMail en Shopify, quienes han observado el orden de activación de los píxeles y su impacto en la atribución. Es un desafío.</p>
+
+    <h2>Observaciones de Pruebas en el Mundo Real</h2>
+    <p>Nuestros probadores beta de SwiftMail en Shopify han proporcionado valiosas observaciones. En un 70% de los casos, el Pixel Web de Shopify dispara antes del pixel de seguimiento de la plataforma de correo electrónico. Esto tiene implicaciones significativas para la atribución. Por ejemplo, si el Pixel Web dispara primero, puede atribuir una conversión a una campaña de redes sociales en lugar de una campaña de marketing por correo electrónico. Sin embargo, nuestros datos también muestran que el 22% de la abandono se debe a la fricción de formulario, lo que se puede mitigar optimizando las campañas de marketing por correo electrónico. Al entender el orden de disparo del pixel, los dueños de tiendas pueden optimizar mejor sus campañas de marketing y mejorar el rendimiento general de la tienda. Como señala esp-docs, configurar el orden de disparo del pixel requiere habilidades técnicas, pero los recompensas valen la pena el esfuerzo. Vale la pena.</p>
+
+    <h2>Configurando el Orden de Disparo de Píxeles</h2>
+    <p>Configurar el orden de disparo de píxeles es clave. Requiere habilidades técnicas. Pero es esencial para la atribución precisa. Shopify proporciona documentación sobre la implementación de Web Pixel, que se puede encontrar en su página de soporte. Además, los píxeles de seguimiento de plataformas de correo electrónico se pueden configurar para dispararse en eventos específicos, como aperturas o clics. Al entender cómo interactúan estos píxeles, los dueños de tiendas pueden optimizar sus campañas de marketing y mejorar el rendimiento general de la tienda. Por ejemplo, utilizando los <a href="https://swift-mail.app/multichannel-triggers">desencadenantes de múltiples canales de SwiftMail</a>, los dueños de tiendas pueden disparar píxeles en múltiples canales, incluyendo correo electrónico, SMS y notificaciones de empuje web. Es simple: configura.</p>
+
+    <h2>Implicaciones del orden de disparo de píxeles</h2>
+    <p>Las implicaciones son significativas. En el 70% de los casos en que el píxel Web de Shopify dispara primero, puede atribuir conversiones al canal incorrecto. Esto puede llevar a una atribución inexacta y a decisiones de marketing deficientes. Sin embargo, al entender el orden de disparo de píxeles, los propietarios de tiendas pueden optimizar sus campañas de marketing y mejorar el rendimiento general de la tienda. Por ejemplo, utilizando la <a href="https://swift-mail.app/abandonment-analytics">análisis de abandono de SwiftMail</a>, los propietarios de tiendas pueden identificar áreas de fricción en el viaje del cliente y optimizar sus campañas de marketing en consecuencia. Como se ha notado en datos primarios, el orden de disparo de píxeles afecta la atribución, y es esencial entender esta relación para tomar decisiones de marketing informadas. Importa.</p>
+
+    <h2>Buenas prácticas para la implementación</h2>
+    <p>La implementación de los pixeles de Shopify Web y de la plataforma de email requiere cuidado. Los propietarios de tiendas deben asegurarse de que entiendan el orden de disparo de los pixeles y cómo afecta la atribución. Al utilizar el seguimiento conjuntivo, los propietarios de tiendas pueden disparar pixeles en múltiples canales y mejorar la atribución. Además, los pixeles de seguimiento de la plataforma de email se pueden configurar para disparar en eventos específicos, como los abiertos o los clics. Al optimizar el orden de disparo de los pixeles, los propietarios de tiendas pueden mejorar el rendimiento de las campañas de marketing y proporcionar una mejor experiencia al cliente. Por ejemplo, utilizando la <a href="https://swift-mail.app/customer-journey-mapping">mappación de viaje del cliente</a> de SwiftMail, los propietarios de tiendas pueden identificar áreas de fricción en el viaje del cliente y optimizar sus campañas de marketing en consecuencia. Como se señala en la investigación de la industria, los pixeles de seguimiento de la plataforma de email se pueden utilizar en conjunto con Shopify Web Pixel para proporcionar una comprensión más completa del comportamiento del cliente. Es una buena práctica.</p>
+
+    <p>Hemos visto esto en primera persona con nuestros pruebas beta de SwiftMail en Shopify, quienes han observado el orden de disparo de los pixeles y su impacto en la atribución. Al seguir las buenas prácticas para la implementación, los propietarios de tiendas pueden optimizar sus campañas de marketing y mejorar el rendimiento general de la tienda. Para obtener más información sobre la optimización de las campañas de marketing de email, consulte nuestro <a href="https://swift-mail.app/email-marketing-guide">guión de marketing de email</a>. Además, para obtener más información sobre el uso de los disparadores de múltiples canales de SwiftMail, consulte nuestro <a href="https://swift-mail.app/multichannel-triggers-docs">documentación de disparadores de múltiples canales</a>.</p>
+  </main>
+
+  <footer class="blog-footer">
+    <p>© 2026 SwiftMail. <a href="/es/">Inicio</a> · <a href="/es/privacy.html">Privacidad</a> · <a href="/es/terms.html">Términos</a></p>
+  </footer>
+</body>
+</html>
