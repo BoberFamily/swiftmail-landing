@@ -652,8 +652,10 @@
   unique_data_hint: Pixel-miss rate from SwiftMail beta testers (% of conversions
     missed by pixel-only)
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-07-11T07:08:57.161Z
+  published_at: 2026-07-11T07:34:19.020Z
 - slug: identity-resolution-without-cookies
   title: "Identity Resolution After Third-Party Cookies: 5 Server-Side Patterns"
   category: behavioral

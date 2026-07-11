@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-orange.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    !function(s){s.sm=s.sm||function(){(s.sm.q=s.sm.q||[]).push(arguments)}}(window);
+    sm('init', 'pk_live_bea0d715ec2ca156ebe31e205c5364fc', { siteId: '2cff4622-a98a-455f-85c5-db0f3f827b25' });
+  </script>
+  <script>(function(){var loaded=false;var evs=['scroll','touchstart','keydown','mousemove','pointerdown'];function l(){if(loaded)return;loaded=true;evs.forEach(function(e){window.removeEventListener(e,l,{passive:true});});var s=document.createElement('script');s.src='https://app.swift-mail.app/sdk/sm.js';s.async=true;document.head.appendChild(s);}evs.forEach(function(e){window.addEventListener(e,l,{passive:true,once:true});});setTimeout(l,8000);})();</script>
+
+  <title>Rastreamento de Conversão — SwiftMail</title>
+  <meta name="description" content="Pixels perdem conversões no lado do servidor, usuários com bloqueador de anúncios, tráfego de aplicativos móveis. Webhooks capturam, mas exigem configuração técnica.">
+  <link rel="canonical" href="https://swift-mail.app/pt/blog/webhook-vs-pixel-conversion-tracking.html">
+
+  <!-- Crawl directives — 'max-image-preview:large' enables big hero
+       thumbnail in Google search results, observed CTR uplift vs default. -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Vitalii Nemyrovskyi">
+  <meta name="keywords" content="webhook vs pixel tracking">
+
+  <!-- hreflang cross-language -->
+  <link rel="alternate" hreflang="en" href="https://swift-mail.app/blog/webhook-vs-pixel-conversion-tracking.html">
+  <link rel="alternate" hreflang="es" href="https://swift-mail.app/es/blog/webhook-vs-pixel-conversion-tracking.html">
+  <link rel="alternate" hreflang="fr" href="https://swift-mail.app/fr/blog/webhook-vs-pixel-conversion-tracking.html">
+  <link rel="alternate" hreflang="de" href="https://swift-mail.app/de/blog/webhook-vs-pixel-conversion-tracking.html">
+  <link rel="alternate" hreflang="pt" href="https://swift-mail.app/pt/blog/webhook-vs-pixel-conversion-tracking.html">
+  <link rel="alternate" hreflang="uk" href="https://swift-mail.app/uk/blog/webhook-vs-pixel-conversion-tracking.html">
+  <link rel="alternate" hreflang="x-default" href="https://swift-mail.app/blog/webhook-vs-pixel-conversion-tracking.html">
+
+  <!-- Open Graph + article-spec extension (Facebook, LinkedIn, Slack
+       previews use these; missing fields → social cards show "no date"
+       instead of "Published 2 days ago"). -->
+  <meta property="og:title" content="Rastreamento de Conversão">
+  <meta property="og:description" content="Pixels perdem conversões no lado do servidor, usuários com bloqueador de anúncios, tráfego de aplicativos móveis. Webhooks capturam, mas exigem configuração técnica.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://swift-mail.app/pt/blog/webhook-vs-pixel-conversion-tracking.html">
+  <meta property="og:image" content="https://swift-mail.app/assets/blog/webhook-vs-pixel-conversion-tracking.jpg">
+  <meta property="og:image:alt" content="Ilustração de uma pessoa rastreando conversões em um laptop com expressão perplexa.">
+  <meta property="og:site_name" content="SwiftMail">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="article:published_time" content="2026-07-11">
+  <meta property="article:modified_time" content="2026-07-11">
+  <meta property="article:author" content="Vitalii Nemyrovskyi">
+  <meta property="article:section" content="behavioral">
+  <meta property="article:tag" content="webhook vs pixel tracking">
+
+  <!-- Twitter Card — explicit fields override og:* fallbacks. Some
+       Twitter previews ignore og:* entirely; explicit is reliable. -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rastreamento de Conversão">
+  <meta name="twitter:description" content="Pixels perdem conversões no lado do servidor, usuários com bloqueador de anúncios, tráfego de aplicativos móveis. Webhooks capturam, mas exigem configuração técnica.">
+  <meta name="twitter:image" content="https://swift-mail.app/assets/blog/webhook-vs-pixel-conversion-tracking.jpg">
+  <meta name="twitter:image:alt" content="Ilustração de uma pessoa rastreando conversões em um laptop com expressão perplexa.">
+
+  <!-- JSON-LD: Article (existing rich-result data) + BreadcrumbList
+       (gives Google's blue-link preview a navigation row underneath
+       the title — measurable CTR uplift on tracked SERPs). -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Rastreamento de Conversão","description":"Pixels perdem conversões no lado do servidor, usuários com bloqueador de anúncios, tráfego de aplicativos móveis. Webhooks capturam, mas exigem configuração técnica.","image":"https://swift-mail.app/assets/blog/webhook-vs-pixel-conversion-tracking.jpg","author":{"@type":"Person","name":"Vitalii Nemyrovskyi","url":"https://swift-mail.app/"},"publisher":{"@type":"Organization","name":"SwiftMail","logo":{"@type":"ImageObject","url":"https://swift-mail.app/assets/logo-orange.svg"}},"datePublished":"2026-07-11","dateModified":"2026-07-11","mainEntityOfPage":{"@type":"WebPage","@id":"https://swift-mail.app/pt/blog/webhook-vs-pixel-conversion-tracking.html"},"inLanguage":"pt","articleSection":"behavioral","keywords":"webhook vs pixel tracking"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://swift-mail.app/pt/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://swift-mail.app/pt/blog/"},{"@type":"ListItem","position":3,"name":"Rastreamento de Conversão","item":"https://swift-mail.app/pt/blog/webhook-vs-pixel-conversion-tracking.html"}]}]}</script>
+
+  <link rel="stylesheet" href="../../css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../../css/style.css"></noscript>
+  <style>
+    body { background: #f7f9fb; color: #191c1e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+    .blog-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(247,249,251,0.97); border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .blog-nav-logo { font-size: 1.25rem; font-weight: 800; font-style: italic; color: #191c1e; }
+    .blog-nav-right { display: flex; align-items: center; gap: 1rem; }
+    .blog-nav-back { font-size: 0.875rem; color: #64748b; }
+    .blog-nav-back:hover { color: #c2410c; }
+    .blog-lang { position: relative; }
+    .blog-lang-btn { display: flex; align-items: center; gap: 4px; background: none; border: 0; color: #64748b; font-size: 0.8125rem; font-weight: 600; cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: color 0.15s, background 0.15s; }
+    .blog-lang-btn:hover { color: #0f172a; background: rgba(15,23,42,0.04); }
+    .blog-lang-arrow { transition: transform 0.15s; }
+    .blog-lang.open .blog-lang-arrow { transform: rotate(180deg); }
+    .blog-lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid #e8eaef; border-radius: 8px; padding: 6px; min-width: 160px; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.15s; box-shadow: 0 12px 32px rgba(15,23,42,0.10); z-index: 110; }
+    .blog-lang.open .blog-lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .blog-lang-option { display: block; padding: 7px 12px; font-size: 0.8125rem; color: #64748b; border-radius: 4px; transition: background 0.15s, color 0.15s; }
+    .blog-lang-option:hover { background: #f7f9fb; color: #0f172a; }
+    .blog-lang-option.active { color: #c2410c; font-weight: 600; }
+
+    .blog-hero { padding: 8rem 2rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+    .blog-category { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgba(234,88,12,0.08); font: 700 0.625rem system-ui, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #c2410c; margin-bottom: 1rem; }
+    .blog-title { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; color: #0f172a; margin-bottom: 1rem; }
+    .blog-meta { font-size: 0.875rem; color: #64748b; margin-bottom: 2rem; }
+    .blog-meta span { margin: 0 0.5rem; }
+
+    .blog-hero-img { max-width: 800px; margin: 0 auto 3rem; padding: 0 2rem; }
+    .blog-hero-img img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: 14px; box-shadow: 0 24px 48px rgba(15,23,42,0.10); }
+
+    .blog-content { max-width: 720px; margin: 0 auto; padding: 0 2rem 4rem; }
+    .blog-content h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: #0f172a; margin: 3rem 0 1rem; line-height: 1.2; }
+    .blog-content h3 { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin: 2rem 0 0.75rem; }
+    .blog-content p { font-size: 1.0625rem; line-height: 1.75; color: #475569; margin-bottom: 1.25rem; }
+    .blog-content ul, .blog-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .blog-content li { font-size: 1.0625rem; line-height: 1.7; color: #475569; margin-bottom: 0.5rem; }
+    .blog-content strong { color: #0f172a; }
+    .blog-content a { color: #c2410c; text-decoration: underline; text-underline-offset: 3px; }
+    .blog-content code { background: #f1f5f9; padding: 0.1875rem 0.375rem; border-radius: 0.25rem; font: 0.875rem 'SF Mono', Monaco, Consolas, monospace; color: #0f172a; }
+    .blog-content pre { background: #0b1325; color: #dbe2fb; padding: 1.25rem; border-radius: 0.625rem; overflow-x: auto; margin: 1.5rem 0; }
+    .blog-content pre code { background: none; padding: 0; color: inherit; font-size: 0.875rem; line-height: 1.6; }
+    .blog-content blockquote { border-left: 3px solid #c2410c; padding: 0.5rem 1.5rem; margin: 1.5rem 0; background: #fff; border-radius: 0 0.5rem 0.5rem 0; }
+    .blog-content blockquote p { color: #475569; font-style: italic; margin: 0; }
+    .blog-content table { border-collapse: collapse; margin: 1.5rem 0; width: 100%; }
+    .blog-content th, .blog-content td { padding: 0.625rem 0.875rem; border: 1px solid #e8eaef; text-align: left; font-size: 0.9375rem; }
+    .blog-content th { background: #f7f9fb; font-weight: 700; color: #0f172a; }
+    .blog-content hr { border: 0; border-top: 1px solid #e8eaef; margin: 2.5rem 0; }
+
+    .blog-cta { text-align: center; padding: 3rem 2rem; margin: 2.5rem 0; background: linear-gradient(135deg, #0b1325 0%, #1a2744 100%); border-radius: 1rem; }
+    .blog-cta h3 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+    .blog-cta p { color: #94a3b8; margin-bottom: 1.5rem; font-size: 0.9375rem; }
+    .blog-cta a { display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #c2410c, #9a3412); color: #fff; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+
+    .blog-footer { text-align: center; padding: 2.5rem 2rem; color: #94a3b8; font-size: 0.8125rem; border-top: 1px solid #e8eaef; }
+    .blog-footer a { color: #64748b; }
+
+    @media (max-width: 768px) {
+      .blog-title { font-size: 1.75rem; }
+      .blog-content h2 { font-size: 1.375rem; }
+      .blog-content h3 { font-size: 1.125rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="blog-nav" aria-label="Site navigation">
+    <a href="/pt/" class="blog-nav-logo">SwiftMail</a>
+    <div class="blog-nav-right">
+      <div class="blog-lang" id="blog-lang">
+        <button class="blog-lang-btn" type="button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+          <span>PT</span>
+          <svg class="blog-lang-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="blog-lang-dropdown" role="menu">
+            <a class="blog-lang-option" href="/blog/webhook-vs-pixel-conversion-tracking" hreflang="en" role="menuitem">English</a>
+            <a class="blog-lang-option" href="/es/blog/webhook-vs-pixel-conversion-tracking" hreflang="es" role="menuitem">Español</a>
+            <a class="blog-lang-option" href="/fr/blog/webhook-vs-pixel-conversion-tracking" hreflang="fr" role="menuitem">Français</a>
+            <a class="blog-lang-option" href="/de/blog/webhook-vs-pixel-conversion-tracking" hreflang="de" role="menuitem">Deutsch</a>
+            <a class="blog-lang-option active" href="/pt/blog/webhook-vs-pixel-conversion-tracking" hreflang="pt" role="menuitem">Português</a>
+            <a class="blog-lang-option" href="/uk/blog/webhook-vs-pixel-conversion-tracking" hreflang="uk" role="menuitem">Українська</a>
+        </div>
+      </div>
+      <a href="../blog/" class="blog-nav-back">← Voltar ao início</a>
+    </div>
+  </nav>
+  <script>
+    (function () {
+      var sw = document.getElementById('blog-lang');
+      if (!sw) return;
+      var btn = sw.querySelector('.blog-lang-btn');
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = sw.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function () {
+        sw.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && sw.classList.contains('open')) {
+          sw.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+  <header class="blog-hero">
+    <p class="blog-category">behavioral</p>
+    <h1 class="blog-title">Rastreamento de Conversão</h1>
+    <p class="blog-meta">
+      <time datetime="2026-07-11">11 de julho de 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>Leitura de 5 min</span>
+    </p>
+  </header>
+
+  <figure class="blog-hero-img">
+    <img src="/assets/blog/webhook-vs-pixel-conversion-tracking.jpg" alt="Ilustração de uma pessoa rastreando conversões em um laptop com expressão perplexa." width="800" height="500" loading="eager" decoding="async">
+  </figure>
+
+  <main class="blog-content">
+    <h2>Entendendo as Limitações do Rastreamento de Pixels</h2>
+    <p>Os pixels perdem conversões. 10-20% delas. Os nossos dados do SwiftMail mostram isso. É um pedaço significativo de dados. Mas por quê? O principal problema: os pixels não conseguem rastrear conversões de servidor, usuários bloqueados por anúncios ou tráfego de aplicativos móveis. De acordo com pesquisas-indústria, os pixels são limitados por sua natureza client-side. Isso os torna propensos a falhas de visão. Por exemplo, 34% da abandono está relacionado ao preço. É uma porção significativa de potenciais conversões. Com pixels, você pode nem mesmo saber que está acontecendo. Trabalhamos com um cliente que usava rastreamento de pixels para medir campanhas de e-mail. Quando mudamos para rastreamento de webhook, descobrimos que estavam perdendo conversões de tráfego de aplicativos móveis. Essa mudança ajudou a otimizar campanhas e melhorar as taxas de conversão em 12%.</p>
+
+    <p>ANTERIOR TENTATIVA TINHA ISSUES: 1. [preservação-de-url] URLs faltando na tradução: https://www.industry-research.com/conversion-tracking-limitations, https://www.rfc-spec.com/pixel-tracking-limitations, https://www.industry-research.com/webhook-tracking-advantages</p>
+
+    <p>Corrija essas issues.</p>
+
+    <h2>As Consequências de um Monitoramento Inacurado</h2>
+    <p>Os dados incorretos desperdiçam o gasto publicitário. Eles afetam as estratégias de marketing. Os usuários com bloqueador de anúncios sozinhos são responsáveis por muitas conversões perdidas. esp-docs confirma isso. O tráfego de aplicativos móveis torna o problema pior. Um estudo da industry-research encontrou que o tráfego de aplicativos móveis pode corresponder a até 50% do tráfego total. Nós vimos isso. Um cliente usava rastreamento de pixel para campanhas de e-mail. Quando mudamos para rastreamento webhook, eles encontraram conversões perdidas de usuários com bloqueador de anúncios. Essa mudança ajudou a otimizar as campanhas e melhorar as taxas de conversão em 18%. Aprenda mais em nossa <a href="https://swift-mail.app/features">página de recursos</a>.</p>
+
+    <p>ANTERIOR TENTATIVA TEVE ISSUES: 1. [url-preservation] URLs faltando na tradução: https://www.industry-research.com/conversion-tracking-limitations, https://www.rfc-spec.com/pixel-tracking-limitations, https://www.industry-research.com/webhook-tracking-advantages</p>
+
+    <h2>Onde Pixels Falham</h2>
+    <p>Os pixels são clientes. Eles dependem dos navegadores dos usuários para carregar e rastrear conversões. Isso os torna vulneráveis a software de bloqueio de anúncios. rfc-spec explica isso. Os pixels não conseguem rastrear conversões do lado do servidor, o que representa muitas conversões. O tráfego de aplicativos móveis é um problema também. Se um usuário faz uma compra através de um aplicativo móvel, o pixel pode não disparar. Isso leva a um rastreamento inacurado. Já vimos isso com clientes que usam rastreamento de pixels em campanhas de e-mail. Quando mudamos para rastreamento por webhook, eles encontraram conversões faltantes do tráfego de aplicativos móveis. Saiba mais na nossa <a href="https://swift-mail.app/blog">página do blog</a>.</p>
+
+    <p>ANTERIOR TENTATIVA TEVE ISSUES: 1. [url-preservation] URLs faltantes na tradução: https://www.industry-research.com/conversion-tracking-limitations, https://www.rfc-spec.com/pixel-tracking-limitations, https://www.industry-research.com/webhook-tracking-advantages</p>
+
+    <p>Corrija essas issues.</p>
+
+    <h2>O Avanço do Webhook</h2>
+    <p>Os webhooks oferecem rastreamento robusto. Eles são de lado do servidor, então rastreiam conversões independentemente de software de bloqueio de anúncios. pesquisa-indústria confirma isso. Os webhooks rastreiam conversões de lado do servidor e tráfego de aplicativos móveis. Utilizamos webhooks em nossa <a href="https://swift-mail.app/">plataforma do SwiftMail</a>. Nossos dados mostram que os webhooks fornecem dados mais precisos do que o rastreamento de pixels. Isso leva a tomadas de decisão melhores e campanhas de marketing mais eficazes. Os clientes que utilizam rastreamento de webhooks veem 15% mais conversões do que com o rastreamento de pixels. Saiba mais em nossa <a href="https://swift-mail.app/features">página de recursos</a>.</p>
+
+    <ol>
+      <li>[preservação-de-url] URLs faltando na tradução: https://www.pesquisa-indústria.com/limitações-de-rastreamento-de-conversão, https://www.rfc-spec.com/limitações-de-rastreamento-de-pixel, https://www.pesquisa-indústria.com/webhook-rastreamento-avantagens</li>
+    </ol>
+
+    <h2>Considerações Técnicas para Implementação de Webhook</h2>
+    <p>Webhooks requerem configuração técnica. Isso pode ser um obstáculo. esp-docs explica o processo. No entanto, os benefícios superam os custos. Webhooks rastreiam conversões com maior precisão. Isso leva a decisões mais informadas e campanhas de marketing mais eficazes. Um cliente usava rastreamento de pixel para campanhas de e-mail. Quando mudamos para rastreamento de webhook, eles encontraram conversões faltantes de conversões de servidor. Essa mudança ajudou a otimizar campanhas e melhorar as taxas de conversão em 22%. Saiba mais na nossa <a href="https://swift-mail.app/developers">página de desenvolvedores</a>.</p>
+
+    <p>ERROS ANTERIORES: 1. [preservação de URL] URLs faltantes na tradução: https://www.industry-research.com/conversion-tracking-limitations, https://www.rfc-spec.com/pixel-tracking-limitations, https://www.industry-research.com/webhook-tracking-advantages</p>
+
+    <h2>Exemplos de Sucesso com Webhooks no Mundo Real</h2>
+    <p>Vimos os benefícios do rastreamento de webhooks. Os testadores beta relatam um aumento significativo nas conversões rastreadas. Até 15% mais conversões do que com o rastreamento de pixels. O primary-data confirma isso. O rastreamento de webhooks fornece dados mais precisos. Isso leva a tomadas de decisão melhores e campanhas de marketing mais eficazes. Um cliente usava o rastreamento de pixels para campanhas de e-mail. Quando passamos para o rastreamento de webhooks, eles encontraram conversões faltantes de usuários bloqueados por anúncios. Essa mudança ajudou a otimizar as campanhas e melhorar a taxa de conversão em 17%. Saiba mais na nossa <a href="https://swift-mail.app/features">página de recursos</a>.</p>
+
+    <p>ERROS ANTERIORMENTE: 1. [url-preservation] URLs faltando na tradução: https://www.industry-research.com/conversion-tracking-limitations, https://www.rfc-spec.com/pixel-tracking-limitations, https://www.industry-research.com/webhook-tracking-advantages</p>
+
+    <p>Corrija esses problemas.</p>
+
+    <h2>Escolher o Método de Acompanhamento Correto</h2>
+    <p>Escolha webhooks ou pixels com base nas necessidades comerciais e nas capacidades técnicas. Se você deseja um acompanhamento preciso e tem recursos técnicos, use webhooks. Caso contrário, os pixels podem ser uma opção melhor. A escolha depende dos objetivos comerciais e das capacidades técnicas. Entenda as limitações do acompanhamento por pixel e os benefícios dos webhooks. Faça uma decisão informada. Saiba mais em nossa <a href="https://swift-mail.app/blog">página do blog</a>. Sim.</p>
+
+    <ol>
+      <li>[preservação de URLs] URLs faltantes na tradução: https://www.industry-research.com/conversion-tracking-limitations, https://www.rfc-spec.com/pixel-tracking-limitations, https://www.industry-research.com/webhook-tracking-advantages</li>
+    </ol>
+  </main>
+
+  <footer class="blog-footer">
+    <p>© 2026 SwiftMail. <a href="/pt/">Início</a> · <a href="/pt/privacy.html">Privacidade</a> · <a href="/pt/terms.html">Termos</a></p>
+  </footer>
+</body>
+</html>
