@@ -680,8 +680,10 @@
     - UTM naming convention
   unique_data_hint: UTM-mess severity observed across SwiftMail beta testers
   humor_level: 2
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-07-13T08:13:03.773Z
+  published_at: 2026-07-13T08:33:52.250Z
 - slug: zapier-vs-native-integration
   title: When Zapier Integration Is Fine — And When It'll Cost You at Scale
   category: strategy
