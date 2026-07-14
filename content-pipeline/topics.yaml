@@ -694,8 +694,10 @@
     - zapier vs native integration cost
   unique_data_hint: SwiftMail integration setup time vs Zapier-equivalent
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1500
+  drafted_at: 2026-07-14T07:07:12.164Z
+  published_at: 2026-07-14T07:26:25.046Z
 - slug: api-rate-limits-bulk-sends
   title: "API Rate Limits Across Major ESPs: Reality of Bulk Sending in 2026"
   category: deliverability
