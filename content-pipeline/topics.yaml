@@ -709,5 +709,7 @@
     - postmark rate limits
   unique_data_hint: SwiftMail's rate-limit posture
   humor_level: 1
-  status: idea
+  status: published
   est_words: 1400
+  drafted_at: 2026-07-15T07:10:25.179Z
+  published_at: 2026-07-15T07:38:52.804Z
